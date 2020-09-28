@@ -126,18 +126,17 @@ h4 {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
   font-size: .875em;
   line-height: 1.285;
   font-weight: 500;
 }
 
 img {
-
+  width: 100%;
 }
 
 figure {
-
+  margin: 0;
 }
 
 address {
@@ -174,6 +173,14 @@ header .content-wrapper {
   flex-flow: row wrap;
 }
 
+header figure {
+  width: 60%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow:  row wrap;
+}
+
 .header-divider {
   background: #3a3a3a;
   width: 100%;
@@ -203,7 +210,7 @@ header nav ul li {
 }
 
 footer {
-  flex-direction: row wrap;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -244,6 +251,11 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url('../img/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+
 }
 
 .hero-area h1 {
@@ -252,6 +264,7 @@ footer .copyright {
   font-weight: 500;
   line-height: 1.2;
 }
+
 /* Aside */
 
 aside {
@@ -294,6 +307,9 @@ input[type=button] {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url('../img/campground.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .features h2 {
@@ -313,6 +329,7 @@ input[type=button] {
 }
 
 .features p {
+  text-align: center;
   margin: 0;
 }
 
@@ -490,14 +507,15 @@ input[type=button] {
     }
     
     h2 {
-    font-size: 2.25em;
-    line-height: 1.333;
+      font-size: 2.25em;
+      line-height: 1.333;
     }
 
-  h3{
-    font-size: 1.5em;
-    line-height: 1.25;
-  }
+    h3{
+     font-size: 1.5em;
+     line-height: 1.25;
+    }
+
     /* Header */
     header {
       justify-content: space-around;
@@ -509,6 +527,10 @@ input[type=button] {
       justify-content: space-between;
     }
   
+    header figure {
+      width: 30%;
+    }
+
     header nav {
       width: 20%;
     }
@@ -521,13 +543,20 @@ input[type=button] {
       display: none;
     }
 
+  
+ 
     /* Hero Area */
+
+    .hero-area {
+      min-height: 600px;
+    }
 
     .hero-area h1 {
       font-size: 3em;
       line-height: 1;
       margin: 0;
     }
+
 
     /* Aside */
 
@@ -572,6 +601,7 @@ input[type=button] {
       width: 85%;
     }
 
+    .reviews article figure,
     .reviews article div {
       width: 49%;
     }
@@ -643,10 +673,7 @@ input[type=button] {
     /* ==========================================================================
      FAQ Page
      ========================================================================== */
-  
-     header {
-      padding: 15px 0;
-    }
+
     
     .faq .content-wrapper {
       justify-content: space-between;
@@ -670,6 +697,10 @@ input[type=button] {
   @media only screen and (min-width:1200px) {
     /*Desktop styles here*/
   
+    header {
+      padding: 15px 0;
+    }
+
     .content-wrapper {
       max-width: 960px;
     }
@@ -688,12 +719,18 @@ input[type=button] {
       line-height: 1.333;
     }
    
+    /* Header */
+
+    header figure {
+      width: 30%;
+    }
 
     /* Hero */
     .hero-area h1 {
       font-size: 3.75em;
       width: 60%;
-  }
+    }
+
   
     /* Aside */
     aside .content-wrapper {
@@ -703,6 +740,10 @@ input[type=button] {
     aside .content-wrapper .form-description,
     aside .content-wrapper .form {
       width: 30%;
+    }
+
+    .form-description p {
+      font-size: 1.125em;
     }
   
     /* Features */
@@ -737,12 +778,16 @@ input[type=button] {
         font-size: 3em;
     }
   
+    .contact-content h4 {
+      font-size: 1.875em;
+    }
     /* ==========================================================================
     FAQ Page
     ========================================================================== */
     
     .faq h2 {
       width: 100%;
+      font-size: 3em; 
     }
 
     .faq h4,
